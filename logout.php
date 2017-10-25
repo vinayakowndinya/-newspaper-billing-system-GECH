@@ -1,0 +1,16 @@
+<?php
+	include('config.php');
+	session_start();
+	session_unset();
+	//unset($_SESSION['login_user']);
+	//unset($username);
+	session_destroy();
+	if(isset($_GET['cur']))
+	{
+		header("location:index.php?updated=true");
+	}
+	else
+	{
+		header("location:index.php");
+	}
+?>
